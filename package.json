@@ -1,5 +1,5 @@
 {
-  "name": "beehive",
+  "name": "beehive-vue2",
   "version": "1.0.0",
   "description": "",
   "main": "dist/beehive.ssr.js",

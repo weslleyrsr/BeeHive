@@ -1,28 +1,28 @@
 <template>
   <div id="app">
     <BeeHive>
-					<BeeHiveRow
-						v-for="(career, index) in sampleData.levels"
-						:index="index + 1"
-						:children="career.roles.length"
-						:key="index"
-						:rowBefore="getRowBeforeChildren(index)"
-						:label="career.id"
-					>
-						<BeeHiveItem
-							v-for="role in career.roles"
-							:key="role.id"
-							:color="role.color"
-							:item="{...role, level: career.id}"
-							:active="role.id === selectedItem?.id"
-              @select="selectHandler"
-						>
-							<p class="hexagon__title">
-								{{role.name}}
-							</p>
-						</BeeHiveItem>
-					</BeeHiveRow>
-				</BeeHive>
+      <BeeHiveRow
+        v-for="(career, index) in sampleData.levels"
+        :index="index + 1"
+        :children="career.roles.length"
+        :key="index"
+        :rowBefore="getRowBeforeChildren(index)"
+        :label="career.id"
+      >
+        <BeeHiveItem
+          v-for="role in career.roles"
+          :key="role.id"
+          :color="role.color"
+          :item="{...role, level: career.id}"
+          :active="role.id === selectedItem?.id"
+          @select="selectHandler"
+        >
+          <p class="hexagon__title">
+            {{role.name}}
+          </p>
+        </BeeHiveItem>
+      </BeeHiveRow>
+    </BeeHive>
   </div>
 </template>
 
