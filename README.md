@@ -1,3 +1,7 @@
+[![Vue](https://img.shields.io/badge/JavaScript%20framework-Vue-4FC08D?style=flat-square&logo=javascript&logoColor=white)](https://vuejs.org/) [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/weslleyrsr/BeeHive)
+
+[![NPM](https://nodei.co/npm/beehive-vue2.png?compact=true)](https://npmjs.com/package/beehive-vue2)
+
 # BeeHive UI
 This project was written with Vue 2 to handle Honeycombs in this "leveled" structure where each row can have N items and each honeycomb have it's own color.
 

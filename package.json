@@ -6,6 +6,10 @@
   "browser": "dist/beehive.esm.js",
   "module": "dist/beehive.esm.js",
   "unpkg": "dist/beehive.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weslleyrsr/BeeHive"
+  },
   "files": [
     "dist/*",
     "src/**/*.vue"
