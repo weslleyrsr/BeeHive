@@ -211,11 +211,11 @@ export default Vue.extend({
   background-color: #393939;
 } */
 
-#app {
+/* #app {
   width: 50vw;
   height: 50vh;
   margin: auto;
-}
+} */
 
 .container {
   display: flex;
