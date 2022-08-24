@@ -80,7 +80,7 @@ export default /*#__PURE__*/{
 
     .row {
         display: flex;
-        // justify-content: center; 
+        justify-content: center; 
     }
 
     .row:not(:first-child) {
@@ -88,6 +88,6 @@ export default /*#__PURE__*/{
     }
 
     .offset {
-        padding-left: $hexagon-width/2 + 2;
+        padding-left: $hexagon-width + 3;
     }
 </style>

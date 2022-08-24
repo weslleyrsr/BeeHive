@@ -47,7 +47,7 @@ $hexagon-border-color: #fff;
 
 .hexagon {
     flex: 0 0 $hexagon-width;
-    max-width: $hexagon-width;
+    width: $hexagon-width;
     height: $hexagon-height;
     margin: calc($hexagon-height/2) calc($hexagon-margin/4);
     position: relative;
