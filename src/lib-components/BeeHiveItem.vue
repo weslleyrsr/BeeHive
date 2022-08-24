@@ -59,7 +59,11 @@ $hexagon-border-color: #fff;
 
     &__title {
         // height: 100%;
-        display: flex;
+        // display: flex;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         flex-direction: column;
         justify-content: center;
         hyphens: auto;
@@ -69,9 +73,10 @@ $hexagon-border-color: #fff;
         font-weight: 700;
         font-size: 1em;
         transition: opacity 350ms;
+        text-overflow: ellipsis;
 
         // Remove this in the future
-        max-height: 30px;
+        // max-height: 30px;
 
         >small {
             font-weight: 300;
