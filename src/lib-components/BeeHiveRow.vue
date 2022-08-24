@@ -48,13 +48,13 @@ export default /*#__PURE__*/{
     },
     methods: {
         getClasses() {
-            let classes = ""
+            let classes = "row"
 
-            if (this.even) {
-                classes += ' row-even'
-            } else {
-                classes += ' row-odd'
-            }
+            // if (this.even) {
+            //     classes += ' row-even'
+            // } else {
+            //     classes += ' row-odd'
+            // }
 
             if (this.needOffset) {
                 classes += ' offset'
@@ -76,14 +76,18 @@ export default /*#__PURE__*/{
 
 <style lang="scss" scoped>
     $hexagon-width: 150px;
+    $hexagon-height: $hexagon-width*.55;
 
-    .row-even, .row-odd {
-        width: 100%;
+    .row {
         display: flex;
-        justify-content: center;
+        // justify-content: center; 
+    }
+
+    .row:not(:first-child) {
+        margin-top: calc(0px - ($hexagon-height/2.2));
     }
 
     .offset {
-        margin-left: $hexagon-width + 4;
+        padding-left: $hexagon-width/2 + 2;
     }
 </style>

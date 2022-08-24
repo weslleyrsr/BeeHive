@@ -21,8 +21,10 @@ $hexagon-height: calc($hexagon-width*.55);
 
 .bee-hive {
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  padding-top: 16px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  flex-direction: column;
+  align-items: stretch;
 }
 </style>

@@ -49,7 +49,7 @@ $hexagon-border-color: #fff;
     flex: 0 0 $hexagon-width;
     max-width: $hexagon-width;
     height: $hexagon-height;
-    margin: calc($hexagon-height/2.23) calc($hexagon-margin/4) $hexagon-margin;
+    margin: calc($hexagon-height/2) calc($hexagon-margin/4);
     position: relative;
     padding: 0.5em;
     cursor: pointer;
