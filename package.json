@@ -1,6 +1,6 @@
 {
   "name": "beehive-vue2",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/beehive.ssr.js",
   "browser": "dist/beehive.esm.js",

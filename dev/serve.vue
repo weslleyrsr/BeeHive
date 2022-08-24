@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <section id="app">
     <BeeHive>
       <BeeHiveRow
         v-for="(career, index) in sampleData.levels"
@@ -23,7 +23,7 @@
         </BeeHiveItem>
       </BeeHiveRow>
     </BeeHive>
-  </div>
+  </section>
 </template>
 
 <script>

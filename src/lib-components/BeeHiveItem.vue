@@ -47,9 +47,9 @@ $hexagon-border-color: #fff;
 
 .hexagon {
     flex: 0 0 $hexagon-width;
-    max-width: $hexagon-width;
+    width: $hexagon-width;
     height: $hexagon-height;
-    margin: calc($hexagon-height/2.23) calc($hexagon-margin/4) $hexagon-margin;
+    margin: calc($hexagon-height/2) calc($hexagon-margin/4);
     position: relative;
     padding: 0.5em;
     cursor: pointer;
@@ -59,7 +59,11 @@ $hexagon-border-color: #fff;
 
     &__title {
         // height: 100%;
-        display: flex;
+        // display: flex;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         flex-direction: column;
         justify-content: center;
         hyphens: auto;
@@ -69,9 +73,10 @@ $hexagon-border-color: #fff;
         font-weight: 700;
         font-size: 1em;
         transition: opacity 350ms;
+        text-overflow: ellipsis;
 
         // Remove this in the future
-        max-height: 30px;
+        // max-height: 30px;
 
         >small {
             font-weight: 300;
