@@ -23,40 +23,6 @@
         </BeeHiveItem>
       </BeeHiveRow>
     </BeeHive>
-
-    <!-- <div class="container">
-
-      <div class="row">
-        <div class="item">Item 1</div>
-      </div>
-
-      <div class="row">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-      </div>
-      
-      <div class="row">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 4</div>
-      </div>
-
-      <div class="row">
-        <div class="item">Item 1</div>
-      </div>
-
-      <div class="row">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 4</div>
-        <div class="item">Item 5</div>
-        <div class="item">Item 6</div>
-      </div>
-      
-    </div> -->
-
   </section>
 </template>
 
@@ -204,36 +170,3 @@ export default Vue.extend({
 }
 );
 </script>
-
-<style>
-
-/* body {
-  background-color: #393939;
-} */
-
-/* #app {
-  width: 50vw;
-  height: 50vh;
-  margin: auto;
-} */
-
-.container {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-  flex-direction: column;
-  align-items: stretch;
-  /* background-color: #e7e7e7; */
-}
-
-.row {
-  display: flex;
-}
-
-.item {
-  padding: 64px;
-
-}
-
-</style>
