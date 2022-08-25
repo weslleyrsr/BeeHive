@@ -23,6 +23,5 @@ $hexagon-height: calc($hexagon-width*.55);
   display: grid;
   width: 100%;
   height: 100%;
-  overflow: auto;
 }
 </style>
