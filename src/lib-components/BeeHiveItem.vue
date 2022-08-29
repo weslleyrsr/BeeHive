@@ -4,7 +4,7 @@
         ref="hexagon"
         :class="`hexagon ${active && 'active'}`"
         :style="`--color: ${color || '#0043CE'};`"
-        @click="onClick"
+        @dblclick="emitSelected"
     >
         <slot></slot>
     </div>
@@ -17,11 +17,10 @@ export default {
     "item": { "type": Object, "required": true },
     "color": { "type": String, "default": "#0043CE", "required": false },
     "active": { "type": Boolean, "default": false, "required": false},
-    "clickHandler": { "type": Function, "default": () => {}, "required": false }
   },
   computed: {},
   methods: {
-    onClick: function() {
+    emitSelected: function() {
         this.$emit("select", this.item);
     }
   },
