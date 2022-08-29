@@ -170,3 +170,10 @@ export default Vue.extend({
 }
 );
 </script>
+
+<style>
+  #app {
+    width: 50vw;
+    height: 50vh;
+  }
+</style>
