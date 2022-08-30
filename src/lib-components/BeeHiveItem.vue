@@ -4,7 +4,7 @@
         ref="hexagon"
         :class="`hexagon ${active && 'active'}`"
         :style="`--color: ${color || '#0043CE'};`"
-        @dblclick="emitSelected"
+        @mousedown="emitSelected"
     >
         <slot></slot>
     </div>
@@ -18,10 +18,31 @@ export default {
     "color": { "type": String, "default": "#0043CE", "required": false },
     "active": { "type": Boolean, "default": false, "required": false},
   },
+  data() {
+    return {
+        initialMousePosition: {},
+        currentMousePosition: {}
+    }
+  },
   computed: {},
   methods: {
-    emitSelected: function() {
-        this.$emit("select", this.item);
+    emitSelected: function(e) {
+        this.initialMousePosition.x = e.clientX;
+        this.initialMousePosition.y = e.clientY;
+
+        this.currentMousePosition.x = e.clientX;
+        this.currentMousePosition.y = e.clientY;
+
+        document.addEventListener("mousemove", (e) => {
+            this.currentMousePosition.x = e.clientX;
+            this.currentMousePosition.y = e.clientY;
+        });
+
+        setTimeout(() => {
+            if (this.currentMousePosition.x === this.initialMousePosition.x && this.currentMousePosition.y === this.initialMousePosition.y) {
+                this.$emit("select", this.item);
+            }
+        }, 50);
     }
   },
 };
