@@ -26,6 +26,18 @@ export default {
   },
   computed: {},
   methods: {
+    mouseMoveHandler: function(e) {
+        this.currentMousePosition.x = e.clientX;
+        this.currentMousePosition.y = e.clientY;
+    },
+    mouseUpHandler: function(e) {
+        if (e.clientX === this.initialMousePosition.x && e.clientY === this.initialMousePosition.y) {
+            this.$emit("select", this.item);
+        }
+
+        document.removeEventListener('mouseup', this.mouseUpHandler);
+        document.removeEventListener('mousemove', this.mouseMoveHandler);
+    },
     emitSelected: function(e) {
         this.initialMousePosition.x = e.clientX;
         this.initialMousePosition.y = e.clientY;
@@ -33,16 +45,8 @@ export default {
         this.currentMousePosition.x = e.clientX;
         this.currentMousePosition.y = e.clientY;
 
-        document.addEventListener("mousemove", (e) => {
-            this.currentMousePosition.x = e.clientX;
-            this.currentMousePosition.y = e.clientY;
-        });
-
-        setTimeout(() => {
-            if (this.currentMousePosition.x === this.initialMousePosition.x && this.currentMousePosition.y === this.initialMousePosition.y) {
-                this.$emit("select", this.item);
-            }
-        }, 50);
+        document.addEventListener("mousemove", this.mouseMoveHandler);
+        document.addEventListener("mouseup", this.mouseUpHandler)
     }
   },
 };
